@@ -1,0 +1,19 @@
+{
+  "name": "crawlcove",
+  "owner": {
+    "name": "Crawl Cove",
+    "url": "https://crawlcove.com"
+  },
+  "metadata": {
+    "description": "Plugins from Crawl Cove, the desktop SEO crawler."
+  },
+  "plugins": [
+    {
+      "name": "crawlcove-seo",
+      "source": "./",
+      "description": "SEO skills backed by a real crawl: site audits, broken links, titles and meta descriptions, indexability, schema markup, AI search visibility and migration checks.",
+      "category": "productivity",
+      "homepage": "https://crawlcove.com/?utm_source=github&utm_medium=claude-seo-plugin"
+    }
+  ]
+}

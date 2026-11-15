@@ -1,0 +1,25 @@
+{
+  "name": "crawlcove-seo",
+  "displayName": "Crawl Cove SEO",
+  "version": "1.0.0",
+  "description": "SEO skills backed by a real crawl. Claude crawls your site (up to 200 pages, robots.txt respected), then audits it, finds broken links with the page to fix, drafts titles and meta descriptions, checks indexability, schema markup and AI search visibility, and compares staging with live before a migration.",
+  "author": {
+    "name": "Crawl Cove",
+    "url": "https://crawlcove.com"
+  },
+  "license": "MIT",
+  "homepage": "https://crawlcove.com/?utm_source=github&utm_medium=claude-seo-plugin",
+  "repository": "https://github.com/CrawlCove/claude-seo-plugin",
+  "keywords": [
+    "seo",
+    "seo-audit",
+    "technical-seo",
+    "site-crawler",
+    "broken-links",
+    "meta-descriptions",
+    "schema-markup",
+    "ai-search",
+    "site-migration",
+    "mcp"
+  ]
+}
