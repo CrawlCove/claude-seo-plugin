@@ -317,8 +317,14 @@ export function createTools(opts = {}) {
   const state = { dataset: null }
 
   const handlers = {
-    async crawl_site({ url, maxPages, ignoreRobots }) {
+    async crawl_site({ url: givenUrl, maxPages, ignoreRobots }) {
       const cap = Math.min(maxPages ?? DEFAULT_LIVE_PAGES, MAX_LIVE_PAGES)
+      // Normalise the start URL (https://example.com -> https://example.com/, no
+      // fragment) so the home page is not crawled and reported a second time
+      // when the site links to its own "/" form.
+      const start = new URL(givenUrl)
+      start.hash = ''
+      const url = start.toString()
       let dataset
       try {
         const result = await crawl(url, {

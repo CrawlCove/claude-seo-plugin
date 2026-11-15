@@ -114,8 +114,10 @@ describe('node server/cli.mjs over stdio', () => {
     const { tools } = (await server.request('tools/list')).result
     assert.deepEqual(tools.map((t) => t.name), ['crawl_site', 'load_export', 'get_issues', 'get_page', 'list_broken_links', 'list_pages'])
 
-    const crawl = (await server.request('tools/call', { name: 'crawl_site', arguments: { url: base + '/', maxPages: 20 } })).result
+    const crawl = (await server.request('tools/call', { name: 'crawl_site', arguments: { url: base, maxPages: 20 } })).result
     assert.equal(crawl.isError, undefined, crawl.content[0].text)
+    // The start URL was given without its trailing slash; "/" must still be crawled once, not twice.
+    assert.equal(site.requests.filter((r) => r.url === '/').length, 1)
     assert.equal(crawl.structuredContent.pageCount, 4) // "/", "/about", "/gone", "/old"
     assert.equal(crawl.structuredContent.truncated, false)
     assert.equal(crawl.structuredContent.robotsBlocked, 1)

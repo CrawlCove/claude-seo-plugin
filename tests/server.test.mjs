@@ -93,6 +93,12 @@ describe('the crawlcove tools', () => {
     assert.equal(r.structuredContent.issueCounts['duplicate-title'], 4)
   })
 
+  it('crawl_site normalises the start URL so the home page is not crawled twice', async () => {
+    const r = await call('crawl_site', { url: 'https://Acme.test#top' })
+    assert.equal(crawlCalls[0].url, 'https://acme.test/')
+    assert.match(textOf(r), /live crawl of https:\/\/acme.test\/: 6 pages/)
+  })
+
   it('crawl_site rejects bad arguments before anything is fetched', async () => {
     const bad = [
       { url: 'not a url' },
