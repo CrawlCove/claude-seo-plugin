@@ -73,6 +73,7 @@ describe('parseHtml', () => {
     assert.equal(parsed.metaDescription, 'Salt & vinegar, "proper" chips')
     assert.deepEqual(parsed.links, ['https://acme.test/search?a=1&b=2', 'https://acme.test/q?x=1&copy=2'])
     assert.equal(decodeEntities('&unknown; &#0; &lt;b&gt;'), '&unknown; � <b>')
+    assert.equal(decodeEntities('WordPress &rsaquo; Error &pound;5 caf&eacute; &Omega;'), 'WordPress \u203a Error \u00a35 caf\u00e9 \u03a9')
   })
 
   it('ignores markup inside comments, scripts, styles and textareas', () => {
@@ -81,6 +82,7 @@ describe('parseHtml', () => {
       <style>a[href="/in-style"] > h1 { color: red }</style>
       <title>Real title</title></head>
       <body><h1>Only one</h1><textarea><a href="/in-textarea">x</a><h1>no</h1></textarea>
+      <noscript><a href="/in-noscript">enable JavaScript</a><h1>no</h1></noscript>
       <a href="/real">real</a> 1 < 2 and <3 <a href="/after-bare-lt">ok</a></body>`
     const parsed = parseHtml(html, 'https://acme.test/')
     assert.equal(parsed.title, 'Real title')
