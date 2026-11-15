@@ -52,6 +52,8 @@ describe('the plugin bundle', () => {
       const name = f.split('/').pop()
       assert.ok(!['package.json', 'package-lock.json', 'yarn.lock', 'pnpm-lock.yaml', '.DS_Store', '.env'].includes(name), `${f} must not be in the bundle`)
       assert.ok(lstatSync(join(ROOT, f)).size < MAX_FILE_BYTES, `${f} is 256 KiB or more`)
+      // The listing icon is the one image the bundle ships.
+      if (f === '.claude-plugin/icon.png') continue
       assert.ok(!readFileSync(join(ROOT, f)).includes(0), `${f} looks binary`)
     }
   })

@@ -28,7 +28,7 @@ In Claude Code:
 /plugin install crawlcove-seo@crawlcove
 ```
 
-The crawl tools start with the plugin; there is nothing else to install or configure. A listing in Anthropic's plugin directory is pending. Until then, the two commands above install it straight from this repository.
+The crawl tools start with the plugin; there is nothing else to install or configure. It is not listed in Anthropic's plugin directory yet, so the two commands above install it straight from this repository.
 
 ## The skills
 
