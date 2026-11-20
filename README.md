@@ -1,3 +1,5 @@
+<a href="https://crawlcove.com/download?utm_source=github&utm_medium=readme&utm_campaign=claude-seo-plugin"><img src="https://raw.githubusercontent.com/CrawlCove/.github/main/banners/claude-seo-plugin.svg" width="1200" alt="claude-seo-plugin: Seven SEO skills for Claude Code backed by a real site crawl: audits, broken links, redirects, titles and fixes, from a chat." /></a>
+
 # claude-seo-plugin
 
 A **Claude SEO plugin** for Claude Code. Ask Claude "audit example.com", "what links to my 404s?" or "write meta descriptions for the pages that have none", and get answers from a real crawl of the site with the affected URLs and the fix for each. It gives Claude seven SEO skills and a small crawler that runs on your computer.
