@@ -27,7 +27,7 @@ import {
 } from './dataset.mjs'
 
 export const SERVER_NAME = 'crawlcove'
-export const SERVER_VERSION = '1.0.0'
+export const SERVER_VERSION = '1.1.0'
 
 /** Hard ceiling on a live crawl. Bigger sites are what the desktop app is for. */
 export const MAX_LIVE_PAGES = 200

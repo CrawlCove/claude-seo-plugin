@@ -1,0 +1,76 @@
+{
+ "recorded": "2026-11-20T00:13:03.597Z",
+ "steps": [
+  {
+   "show": "npx @modelcontextprotocol/inspector --cli node server/cli.mjs --method tools/call --tool-name crawl_site --tool-arg url=https://crawlcove.github.io/seo-test-site/ --tool-arg maxPages=100 | jq -r '.content[0].text'",
+   "exit": 0,
+   "ms": 1786,
+   "lines": [
+    {
+     "t": 1783,
+     "text": "live crawl of https://crawlcove.github.io/seo-test-site/: 80 pages, 10 issues, 1 URLs skipped per robots.txt."
+    },
+    {
+     "t": 1783,
+     "text": ""
+    },
+    {
+     "t": 1783,
+     "text": "Issue counts:"
+    },
+    {
+     "t": 1783,
+     "text": "- broken-page: 2"
+    },
+    {
+     "t": 1783,
+     "text": "- missing-title: 1"
+    },
+    {
+     "t": 1783,
+     "text": "- long-title: 1"
+    },
+    {
+     "t": 1783,
+     "text": "- duplicate-title: 2"
+    },
+    {
+     "t": 1783,
+     "text": "- missing-meta-description: 1"
+    },
+    {
+     "t": 1783,
+     "text": "- missing-h1: 1"
+    },
+    {
+     "t": 1783,
+     "text": "- multiple-h1: 1"
+    },
+    {
+     "t": 1783,
+     "text": "- noindex: 1"
+    },
+    {
+     "t": 1783,
+     "text": ""
+    },
+    {
+     "t": 1783,
+     "text": "Skipped per robots.txt (1):"
+    },
+    {
+     "t": 1783,
+     "text": "- https://crawlcove.github.io/seo-test-site/wholesale/price-list.html"
+    },
+    {
+     "t": 1783,
+     "text": ""
+    },
+    {
+     "t": 1783,
+     "text": "Next: get_issues for the list, get_page for one URL, list_broken_links for link sources, list_pages to browse."
+    }
+   ]
+  }
+ ]
+}

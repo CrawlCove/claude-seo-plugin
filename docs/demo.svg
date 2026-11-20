@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="470" viewBox="0 0 980 470" role="img" aria-label="claude-seo-plugin: the bundled crawl server: terminal recording of npx @modelcontextprotocol/inspector --cli node server/cli.mjs --method tools/call --tool-name crawl_site --tool-arg url=https://crawlcove.github.io/seo-test-site/ --tool-arg maxPages=100 | jq -r '.content[0].text'">
+<title>claude-seo-plugin: the bundled crawl server: npx @modelcontextprotocol/inspector --cli node server/cli.mjs --method tools/call --tool-name crawl_site --tool-arg url=https://crawlcove.github.io/seo-test-site/ --tool-arg maxPages=100 | jq -r '.content[0].text'</title>
+<style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace;font-size:14px;white-space:pre}
+.ln{opacity:0}
+@keyframes k0{0%,3.70%{opacity:0}3.71%,99.5%{opacity:1}100%{opacity:0}}.l0{animation:k0 10814ms linear infinite}
+@keyframes t0{0%,3.70%{width:0}18.49%,99.5%{width:896px}100%{width:0}}#c0{animation:t0 10814ms steps(106,end) infinite}
+@keyframes k1{0%,19.60%{opacity:0}19.61%,99.5%{opacity:1}100%{opacity:0}}.l1{animation:k1 10814ms linear infinite}
+@keyframes t1{0%,19.60%{width:0}34.40%,99.5%{width:786px}100%{width:0}}#c1{animation:t1 10814ms steps(93,end) infinite}
+@keyframes k2{0%,35.51%{opacity:0}35.52%,99.5%{opacity:1}100%{opacity:0}}.l2{animation:k2 10814ms linear infinite}
+@keyframes t2{0%,35.51%{width:0}40.17%,99.5%{width:169px}100%{width:0}}#c2{animation:t2 10814ms steps(20,end) infinite}
+@keyframes k3{0%,50.06%{opacity:0}50.07%,99.5%{opacity:1}100%{opacity:0}}.l3{animation:k3 10814ms linear infinite}
+@keyframes k4{0%,50.62%{opacity:0}50.63%,99.5%{opacity:1}100%{opacity:0}}.l4{animation:k4 10814ms linear infinite}
+@keyframes k5{0%,51.17%{opacity:0}51.18%,99.5%{opacity:1}100%{opacity:0}}.l5{animation:k5 10814ms linear infinite}
+@keyframes k6{0%,51.73%{opacity:0}51.74%,99.5%{opacity:1}100%{opacity:0}}.l6{animation:k6 10814ms linear infinite}
+@keyframes k7{0%,52.28%{opacity:0}52.29%,99.5%{opacity:1}100%{opacity:0}}.l7{animation:k7 10814ms linear infinite}
+@keyframes k8{0%,52.84%{opacity:0}52.85%,99.5%{opacity:1}100%{opacity:0}}.l8{animation:k8 10814ms linear infinite}
+@keyframes k9{0%,53.39%{opacity:0}53.40%,99.5%{opacity:1}100%{opacity:0}}.l9{animation:k9 10814ms linear infinite}
+@keyframes k10{0%,53.95%{opacity:0}53.96%,99.5%{opacity:1}100%{opacity:0}}.l10{animation:k10 10814ms linear infinite}
+@keyframes k11{0%,54.50%{opacity:0}54.51%,99.5%{opacity:1}100%{opacity:0}}.l11{animation:k11 10814ms linear infinite}
+@keyframes k12{0%,55.06%{opacity:0}55.07%,99.5%{opacity:1}100%{opacity:0}}.l12{animation:k12 10814ms linear infinite}
+@keyframes k13{0%,55.61%{opacity:0}55.62%,99.5%{opacity:1}100%{opacity:0}}.l13{animation:k13 10814ms linear infinite}
+@keyframes k14{0%,56.17%{opacity:0}56.18%,99.5%{opacity:1}100%{opacity:0}}.l14{animation:k14 10814ms linear infinite}
+@keyframes k15{0%,56.72%{opacity:0}56.73%,99.5%{opacity:1}100%{opacity:0}}.l15{animation:k15 10814ms linear infinite}
+@keyframes k16{0%,57.28%{opacity:0}57.29%,99.5%{opacity:1}100%{opacity:0}}.l16{animation:k16 10814ms linear infinite}
+@keyframes k17{0%,57.83%{opacity:0}57.84%,99.5%{opacity:1}100%{opacity:0}}.l17{animation:k17 10814ms linear infinite}
+@keyframes k18{0%,58.39%{opacity:0}58.40%,99.5%{opacity:1}100%{opacity:0}}.l18{animation:k18 10814ms linear infinite}
+</style>
+<defs><clipPath id="p0"><rect id="c0" x="39" y="68" height="20" width="0"/></clipPath><clipPath id="p1"><rect id="c1" x="39" y="88" height="20" width="0"/></clipPath><clipPath id="p2"><rect id="c2" x="39" y="108" height="20" width="0"/></clipPath></defs>
+<rect width="980" height="470" rx="12" fill="#0B0E16" stroke="#1E2533"/>
+<rect width="980" height="36" rx="12" fill="#121723"/><rect y="24" width="980" height="12" fill="#121723"/>
+<circle cx="22" cy="18" r="6" fill="#FF5C7A"/><circle cx="42" cy="18" r="6" fill="#FFB020"/><circle cx="62" cy="18" r="6" fill="#34F5C5"/>
+<text x="490" y="23" fill="#8A93A6" text-anchor="middle" style="font-size:13px">claude-seo-plugin: the bundled crawl server</text>
+<g class="ln l0"><text x="22" y="83" fill="#22D3EE">$</text><g clip-path="url(#p0)"><text x="39" y="83" fill="#F2F5FA">npx @modelcontextprotocol/inspector --cli node server/cli.mjs --method tools/call --tool-name crawl_site \</text></g></g>
+<g class="ln l1"><text x="22" y="103" fill="#22D3EE"></text><g clip-path="url(#p1)"><text x="39" y="103" fill="#F2F5FA">  --tool-arg url=https://crawlcove.github.io/seo-test-site/ --tool-arg maxPages=100 | jq -r \</text></g></g>
+<g class="ln l2"><text x="22" y="123" fill="#22D3EE"></text><g clip-path="url(#p2)"><text x="39" y="123" fill="#F2F5FA">  '.content[0].text'</text></g></g>
+<text class="ln l3" x="22" y="143" fill="#C7CEDB">live crawl of https://crawlcove.github.io/seo-test-site/: 80 pages, 10 issues, 1 URLs skipped per robots.txt.</text>
+<text class="ln l4" x="22" y="163" fill="#C7CEDB"> </text>
+<text class="ln l5" x="22" y="183" fill="#C7CEDB">Issue counts:</text>
+<text class="ln l6" x="22" y="203" fill="#FF5C7A">- broken-page: 2</text>
+<text class="ln l7" x="22" y="223" fill="#C7CEDB">- missing-title: 1</text>
+<text class="ln l8" x="22" y="243" fill="#C7CEDB">- long-title: 1</text>
+<text class="ln l9" x="22" y="263" fill="#C7CEDB">- duplicate-title: 2</text>
+<text class="ln l10" x="22" y="283" fill="#C7CEDB">- missing-meta-description: 1</text>
+<text class="ln l11" x="22" y="303" fill="#C7CEDB">- missing-h1: 1</text>
+<text class="ln l12" x="22" y="323" fill="#C7CEDB">- multiple-h1: 1</text>
+<text class="ln l13" x="22" y="343" fill="#FFB020">- noindex: 1</text>
+<text class="ln l14" x="22" y="363" fill="#C7CEDB"> </text>
+<text class="ln l15" x="22" y="383" fill="#C7CEDB">Skipped per robots.txt (1):</text>
+<text class="ln l16" x="22" y="403" fill="#C7CEDB">- https://crawlcove.github.io/seo-test-site/wholesale/price-list.html</text>
+<text class="ln l17" x="22" y="423" fill="#C7CEDB"> </text>
+<text class="ln l18" x="22" y="443" fill="#C7CEDB">Next: get_issues for the list, get_page for one URL, list_broken_links for link sources, list_pages to browse.</text>
+</svg>

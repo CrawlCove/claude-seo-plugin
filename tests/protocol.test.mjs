@@ -129,7 +129,7 @@ describe('node server/cli.mjs over stdio', () => {
       Object.fromEntries(Object.entries(issues.structuredContent.counts).filter(([, n]) => n > 0)),
       {
         'broken-page': 1,
-        'duplicate-title': 2, // "/about" and "/old", which redirects to it
+        // no duplicate-title: "/old" redirects to "/about", so it is the same page, not a second one
         'missing-meta-description': 2,
         'missing-h1': 2,
         'redirect-chain': 1,
@@ -174,6 +174,6 @@ describe('node server/cli.mjs over stdio', () => {
       assert.ok('id' in msg)
       assert.ok('result' in msg !== 'error' in msg, 'exactly one of result or error')
     }
-    assert.match(server.stderr(), /crawlcove 1\.0\.0 ready \(stdio\)/)
+    assert.match(server.stderr(), /crawlcove \d+\.\d+\.\d+ ready \(stdio\)/)
   })
 })

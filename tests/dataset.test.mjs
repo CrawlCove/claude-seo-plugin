@@ -63,7 +63,7 @@ describe('issues', () => {
     assert.equal(counts['missing-meta-description'], 1)
     assert.equal(counts['missing-h1'], 1)
     assert.equal(counts['missing-canonical'], 1)
-    assert.equal(counts['duplicate-title'], 4) // "/", "/old", "/hidden" and "/blog" all carry the fixture's default "A page"
+    assert.equal(counts['duplicate-title'], 2) // "/" and "/blog" share the default "A page"; "/hidden" is noindex and "/old" redirected, so neither competes
     assert.equal(counts.noindex, 1)
     assert.equal(counts['redirect-chain'], 1)
     assert.equal(counts['long-title'], 0)

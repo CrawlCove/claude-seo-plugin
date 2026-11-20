@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url'
 import { SeedBlockedByRobotsError } from '../server/crawler/crawl.mjs'
 import { ISSUE_TYPES } from '../server/dataset.mjs'
 import { createLineReader, handleMessage, RpcError, serveStdio, SUPPORTED_PROTOCOL_VERSIONS } from '../server/protocol.mjs'
-import { createServerSpec, MAX_LIVE_PAGES, MAX_RESPONSE_CHARS } from '../server/tools.mjs'
+import { createServerSpec, MAX_LIVE_PAGES, MAX_RESPONSE_CHARS, SERVER_VERSION } from '../server/tools.mjs'
 
 const cliFixturePath = fileURLToPath(new URL('./fixtures/cli-result.json', import.meta.url))
 const desktopFixturePath = fileURLToPath(new URL('./fixtures/desktop-export.json', import.meta.url))
@@ -86,11 +86,11 @@ describe('the crawlcove tools', () => {
       { url: 'https://acme.test/', maxPages: 50, ignoreRobots: false }
     )
     assert.match(crawlCalls[0].userAgent, /^crawlcove-cli\//)
-    assert.match(textOf(r), /live crawl of https:\/\/acme.test\/: 6 pages, 11 issues/)
+    assert.match(textOf(r), /live crawl of https:\/\/acme.test\/: 6 pages, 9 issues/)
     assert.match(textOf(r), /Skipped per robots.txt \(1\):\n- https:\/\/acme.test\/private/)
     assert.equal(r.structuredContent.pageCount, 6)
     assert.equal(r.structuredContent.robotsBlocked, 1)
-    assert.equal(r.structuredContent.issueCounts['duplicate-title'], 4)
+    assert.equal(r.structuredContent.issueCounts['duplicate-title'], 2)
   })
 
   it('crawl_site normalises the start URL so the home page is not crawled twice', async () => {
@@ -160,13 +160,13 @@ describe('the crawlcove tools', () => {
     assert.equal(issues.structuredContent.total, 1)
 
     const all = await call('get_issues')
-    assert.match(textOf(all), /11 issue\(s\) across 8 types in 6 pages/)
-    assert.match(textOf(all), /- duplicate-title: 4/)
-    assert.equal(all.structuredContent.issues.length, 11)
+    assert.match(textOf(all), /9 issue\(s\) across 8 types in 6 pages/)
+    assert.match(textOf(all), /- duplicate-title: 2/)
+    assert.equal(all.structuredContent.issues.length, 9)
 
     const limited = await call('get_issues', { limit: 3 })
     assert.equal(limited.structuredContent.issues.length, 3)
-    assert.match(textOf(limited), /…and 8 more\. Raise limit, or narrow with type\./)
+    assert.match(textOf(limited), /…and 6 more\. Raise limit, or narrow with type\./)
 
     const page = await call('get_page', { url: 'acme.test/about' })
     assert.match(textOf(page), /Title: \(none\)/)
@@ -265,7 +265,7 @@ describe('the JSON-RPC layer', () => {
     const res = await send({ jsonrpc: '2.0', id: 1, method: 'initialize', params: { protocolVersion: '2025-03-26', capabilities: {}, clientInfo: { name: 't', version: '0' } } })
     assert.equal(res.result.protocolVersion, '2025-03-26')
     assert.deepEqual(res.result.capabilities, { tools: {} })
-    assert.deepEqual(res.result.serverInfo, { name: 'crawlcove', version: '1.0.0' })
+    assert.deepEqual(res.result.serverInfo, { name: 'crawlcove', version: SERVER_VERSION })
     assert.match(res.result.instructions, /crawl_site/)
     const future = await send({ jsonrpc: '2.0', id: 'abc', method: 'initialize', params: { protocolVersion: '2099-01-01' } })
     assert.equal(future.result.protocolVersion, SUPPORTED_PROTOCOL_VERSIONS[0])
