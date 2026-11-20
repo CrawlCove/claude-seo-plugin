@@ -11,7 +11,7 @@ A **Claude SEO plugin** for Claude Code. Ask Claude "audit example.com", "what l
 
 <img src="docs/demo.svg" width="980" alt="Terminal recording: the plugin's bundled crawl server crawls the SEO test site and returns 80 pages and 10 issues by type">
 
-*The bundled crawl server answering the `crawl_site` call Claude makes, run through the MCP Inspector CLI against [seo-test-site](https://github.com/CrawlCove/seo-test-site), a public site with 54 planted SEO problems.*
+*The bundled crawl server answering the `crawl_site` call Claude makes, run through the MCP Inspector CLI against [seo-test-site](https://github.com/CrawlCove/seo-test-site), a public site full of planted SEO problems.*
 
 Things to ask once it is installed:
 
